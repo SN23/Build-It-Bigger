@@ -1,26 +1,22 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.nahal.sukhjinder.androidjokelibrary.DisplayJokeActivity;
-import com.nahal.sukhjinder.jokelib.JokeTelling;
-
 public class MainActivity extends AppCompatActivity {
 
-    private JokeTelling jokeTelling;
-    public static final String JOKE_INTENT = "joke";
+//    private JokeTelling jokeTelling;
+//    public static final String JOKE_INTENT = "joke";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        jokeTelling = new JokeTelling();
+//        jokeTelling = new JokeTelling();
     }
 
 
@@ -47,11 +43,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        String joke = jokeTelling.getJoke();
-        Intent jokeIntent = new Intent(this, DisplayJokeActivity.class);
-        jokeIntent.putExtra(JOKE_INTENT, joke);
-        jokeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(jokeIntent);
+//        String joke = jokeTelling.getJoke();
+//        Intent jokeIntent = new Intent(this, DisplayJokeActivity.class);
+//        jokeIntent.putExtra(JOKE_INTENT, joke);
+//        jokeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        startActivity(jokeIntent);
+        new EndpointsAsyncTask(this).execute();
     }
 
 

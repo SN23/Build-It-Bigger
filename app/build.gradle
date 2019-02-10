@@ -47,6 +47,6 @@ dependencies {
     })
 
     testImplementation 'junit:junit:4.12'
-    compile project(path: ':jokelib')
-    compile project(path: ':androidjokelibrary')
+    implementation project(path: ':jokelib')
+    implementation project(path: ':androidjokelibrary')
 }
